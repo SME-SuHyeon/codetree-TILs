@@ -26,7 +26,7 @@ int main()
 
 	unordered_map<int, int>::iterator iter;
 	int mode;
-	for (int x = 0; x < n; x++)
+	for (int x = 0; x < n-1; x++)
 	{
 		for (int y = x + 1; y < n; y++)
 		{
