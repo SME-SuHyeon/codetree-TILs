@@ -13,15 +13,15 @@ int main()
 {
 	cin >> n;
 	
-	string str;
+	string str[1005];
 
 	for (int i = 0; i < n; i++)
 	{
 		cnt[i] = 1;
 
-		cin >> str;
-		for (int s = 0; s < str.length(); s++)
-			hash_map[i][str[s] - 'a']++;
+		cin >> str[i];
+		for (int s = 0; s < str[i].length(); s++)
+			hash_map[i][str[i][s] - 'a']++;
 	}
 
 	unordered_map<int, int>::iterator iter;
