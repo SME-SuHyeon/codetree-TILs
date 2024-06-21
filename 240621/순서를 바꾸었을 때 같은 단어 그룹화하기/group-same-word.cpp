@@ -26,6 +26,7 @@ int main()
 
 	unordered_map<int, int>::iterator iter;
 	int mode;
+
 	for (int x = 0; x < n-1; x++)
 	{
 		for (int y = x + 1; y < n; y++)
@@ -43,8 +44,8 @@ int main()
 
 				ans = max(ans, cnt[y]);
 
-				x++;
-				y = x + 1;
+
+				y = n+1;
 			}
 		}
 	}
