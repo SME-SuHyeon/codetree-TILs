@@ -13,15 +13,15 @@ int main()
 {
 	cin >> n;
 	
-	string str[1005];
+	string str;
 
 	for (int i = 0; i < n; i++)
 	{
 		cnt[i] = 1;
 
-		cin >> str[i];
-		for (int s = 0; s < str[i].length(); s++)
-			hash_map[i][str[i][s] - 'a']++;
+		cin >> str;
+		for (int s = 0; s < str.length(); s++)
+			hash_map[i][str[s] - 'a']++;
 	}
 
 	unordered_map<int, int>::iterator iter;
@@ -41,11 +41,10 @@ int main()
 			{
 				cnt[y] += cnt[x];
 
-				ans = max(ans, cnt[y]);
-
 				x++;
 				y = x + 1;
 			}
+			ans = max(ans, cnt[y]);
 		}
 	}
 
