@@ -7,7 +7,7 @@ using namespace std;
 
 unordered_map<int, int> hash_map[1005];
 int n;
-int cnt[1005],ans;
+int cnt[1005],ans = 1;
 
 int main()
 {
@@ -41,10 +41,11 @@ int main()
 			{
 				cnt[y] += cnt[x];
 
+				ans = max(ans, cnt[y]);
+
 				x++;
 				y = x + 1;
 			}
-			ans = max(ans, cnt[y]);
 		}
 	}
 
