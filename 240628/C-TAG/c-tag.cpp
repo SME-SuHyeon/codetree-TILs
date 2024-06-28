@@ -8,7 +8,7 @@ using namespace std;
 
 unordered_set<string> s;
 int m, n;
-int ans;
+int ans,cnt;
 string a[505], b[505];
 
 int cmp_str(int z, int y, int x)
@@ -17,17 +17,15 @@ int cmp_str(int z, int y, int x)
 	string str;
 	for (int i = 0; i < n; i++)
 	{
-		str = a[i][z] + a[i][y] + a[i][x];
-		s.insert(str);
+		s.insert(a[i].substr(x, 1) + a[i].substr(y, 1) + a[i].substr(z, 1));
 	}
+	//cout << "=====================" << ++cnt<<'\n';
 
 	for (int i = 0; i < n; i++)
 	{
-		str = b[i][z] + b[i][y] + b[i][x];
-		if (s.find(str) != s.end())
+		if (s.find(b[i].substr(x, 1) + b[i].substr(y, 1) + b[i].substr(z, 1)) != s.end())
 			return 0;
 	}
-
 
 	return 1;
 }
