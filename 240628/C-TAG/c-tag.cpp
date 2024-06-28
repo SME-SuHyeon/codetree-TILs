@@ -13,17 +13,25 @@ string a[505], b[505];
 
 int cmp_str(int z, int y, int x)
 {
+	
 
-	string str;
 	for (int i = 0; i < n; i++)
 	{
-		s.insert(a[i].substr(x, 1) + a[i].substr(y, 1) + a[i].substr(z, 1));
+		string str;
+		str += a[i][z];
+		str += a[i][y];
+		str += a[i][x];
+		s.insert(str);
 	}
 	//cout << "=====================" << ++cnt<<'\n';
 
 	for (int i = 0; i < n; i++)
 	{
-		if (s.find(b[i].substr(x, 1) + b[i].substr(y, 1) + b[i].substr(z, 1)) != s.end())
+		string str;
+		str += b[i][z];
+		str += b[i][y];
+		str += b[i][x];
+		if (s.find(str) != s.end())
 			return 0;
 	}
 
