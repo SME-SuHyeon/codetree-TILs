@@ -8,7 +8,7 @@ using namespace std;
 
 unordered_set<int> group[250005];
 unordered_set<int>::iterator iter;
-vector<int> invited_group[100005];
+vector<int> invited_group[250005];
 int n, g;
 
 int queue[250005],top,bottom;
