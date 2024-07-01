@@ -25,7 +25,6 @@ int deque()
 
 void invite(int a)
 {
-	ans++;
 	for (int i = 0; i < invited_group[a].size(); i++)
 	{
 		int cur_group = invited_group[a][i];
@@ -35,6 +34,7 @@ void invite(int a)
 			for (iter = group[cur_group].begin(); iter != group[cur_group].end(); iter++)
 			{
 				enque(*iter);
+				ans++;
 				//cout << "NOW: " << *iter << '\n';
 			}
 		}
@@ -62,7 +62,7 @@ int main()
 	while (top != bottom)
 		invite(deque());
 
-	cout << ans;
+	cout << ++ans;
 
 	return 0;
 }
