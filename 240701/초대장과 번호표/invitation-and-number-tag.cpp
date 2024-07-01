@@ -9,6 +9,7 @@ using namespace std;
 unordered_set<int> group[250005];
 unordered_set<int>::iterator iter;
 vector<int> invited_group[250005];
+int visited[250005];
 int n, g;
 
 int queue[250005],top,bottom;
@@ -25,6 +26,9 @@ int deque()
 
 void invite(int a)
 {
+	if (visited[a] == 1)
+		return;
+	visited[a] = 1;
 	ans++;
 	//cout << "SIZE: " << invited_group[a].size() << '\n';
 	for (int i = 0; i < invited_group[a].size(); i++)
