@@ -25,6 +25,7 @@ int deque()
 
 void invite(int a)
 {
+	//cout << "SIZE: " << invited_group[a].size() << '\n';
 	for (int i = 0; i < invited_group[a].size(); i++)
 	{
 		int cur_group = invited_group[a][i];
@@ -57,7 +58,7 @@ int main()
 		}
 	}
 
-	invite(1);
+	enque(1);
 
 	while (top != bottom)
 		invite(deque());
