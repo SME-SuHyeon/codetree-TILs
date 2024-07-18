@@ -14,7 +14,7 @@ int main()
 		s.insert(-i - 1);
 
 
-	for (int i = 0; i < m; i++)
+	for (int i = 0; i < n; i++)
 	{
 		int a;
 		cin >> a;
