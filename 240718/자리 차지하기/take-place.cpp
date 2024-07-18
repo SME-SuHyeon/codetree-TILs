@@ -13,15 +13,16 @@ int main()
 	for (int i = 0; i < m; i++)
 		s.insert(-i - 1);
 
+	int a, b;
 
 	for (int i = 0; i < n; i++)
 	{
-		int a;
 		cin >> a;
 
 		if (s.lower_bound(-a) != s.end())
 		{
-			s.erase(-a);
+			b = *s.lower_bound(-a);
+			s.erase(b);
 			ans++;
 		}
 
