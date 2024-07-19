@@ -38,6 +38,9 @@ int main()
 			iter2++;
 	}
 
+	if (minimum == 987654321)
+		minimum = -1;
+
 	cout << minimum;
 
 	return 0;
