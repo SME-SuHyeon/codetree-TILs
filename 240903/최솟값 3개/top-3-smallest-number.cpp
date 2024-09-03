@@ -20,7 +20,7 @@ int main()
 
 		pq.push(-x);
 
-		if (pq.size() < 3)
+		if (i < 2)
 			cout << "-1\n";
 		else
 		{
