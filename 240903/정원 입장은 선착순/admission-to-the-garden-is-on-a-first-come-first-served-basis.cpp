@@ -29,11 +29,11 @@ int main()
 
 	pair<int, int> top,tmp;
 
-	while (pq.empty() == false)
+	while (!(pq.empty() == true &&waiting.empty() == true))
 	{
 		top = pq.top();
 
-		if (waiting.empty() == true||(cur_time>=-top.first))
+		if (waiting.empty() == true||(pq.empty() == false && cur_time>=-top.first))
 		{
 			tmp.first = top.second;
 			tmp.second = top.first;
