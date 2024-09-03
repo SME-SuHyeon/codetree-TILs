@@ -9,8 +9,8 @@ priority_queue <pair<int, int>> pq;
 priority_queue <pair<int, int>> waiting;
 
 int n;
-int garden_time[10005];
-int waited_time[10005];
+int garden_time[100005];
+int waited_time[100005];
 
 int cur_time = 0;
 
