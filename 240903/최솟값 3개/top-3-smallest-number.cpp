@@ -5,9 +5,10 @@
 #include <queue>
 using namespace std;
 
-priority_queue<int> pq;
+priority_queue<long long int> pq;
 int n;
-int a, b, c;
+long long int a, b, c;
+long long int ans;
 
 int main()
 {
@@ -31,7 +32,8 @@ int main()
 			c = -pq.top();
 			pq.pop();
 
-			cout << a * b * c << "\n";
+			ans = a * b * c;
+			cout << ans << "\n";
 
 			pq.push(-a);
 			pq.push(-b);
